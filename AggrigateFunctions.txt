@@ -1,0 +1,15 @@
+SELECT max(age)
+FROM user;
+
+SELECT count(age)
+FROM user
+WHERE age>30;
+
+SELECT sum(age)
+FROM user;
+
+SELECT min(age)
+FROM user;
+
+SELECT average(age)
+FROM user;

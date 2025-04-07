@@ -1,0 +1,118 @@
+USE instagram;
+CREATE TABLE user(
+id INT PRIMARY KEY,
+name varchar(30) NOT NULL,
+age INT,
+email VARCHAR(50) UNIQUE,
+followers INT  DEFAULT 0,
+folows INT,
+CONSTRAINT age_check CHECK (age>=30)
+);
+CREATE TABLE post(
+id INT PRIMARY KEY,
+content VARCHAR(100),
+user_id INT,
+FOREIGN KEY (user_id) REFERENCES user(id)
+);
+ 
+INSERT INTO user
+(id, age ,name,email,followers, folows)
+VALUES
+(10, 30,"nitesh","babliraik.in@gmail.com",100,70),
+(11, 36,"nitesh","babliraiw.in@gmail.com",500,60),
+(12, 30,"nitesh","babliaw.in@gmail.com",300,90);
+
+UPDATE user
+SET age =60
+WHERE age=30;
+
+DELETE FROM user
+WHERE name="mohit";
+
+ALTER TABLE user
+ADD COLUMN city VARCHAR(25) DEFAULT "delhi";
+
+ALTER TABLE user
+DROP COLUMN followers;
+
+ALTER TABLE user
+RENAME to instaUser;
+
+ALTER TABLE instaUser
+RENAME to user;
+
+ALTER TABLE user
+CHANGE  COLUMN  folows likes INT DEFAULT 0 ;
+
+ALTER TABLE user
+MODIFY  COLUMN  likes INT DEFAULT 5 ;
+
+TRUNCATE TABLE  user;
+DROP TABLE post;
+DROP TABLE user;
+SELECT * FROM user;
+
+
+SET SQL_SAFE_UPDATES=0;
+
+
+SELECT id,age,name,email FROM user;
+SELECT * 
+FROM user
+WHERE age>=30;
+
+SELECT name,age
+FROM user
+WHERE age>=30;
+
+SELECT * 
+FROM user
+WHERE age+1=31;
+
+SELECT * 
+FROM user
+WHERE age>=30 and folows>=30;
+
+SELECT * 
+FROM user
+WHERE age>=30 or folows<=50;
+
+SELECT * 
+FROM user
+WHERE age BETWEEN 30 AND 35;
+
+SELECT * 
+FROM user
+WHERE  name IN ("trisha","babli");
+
+SELECT * 
+FROM user
+WHERE  name  NOT IN ("trisha","babli")
+LIMIT 1;
+
+SELECT * 
+FROM user
+LIMIT 2;
+
+SELECT * 
+FROM user
+ORDER BY name asc;
+
+SELECT max(age)
+FROM user;
+
+SELECT count(age)
+FROM user
+WHERE age>30;
+
+SELECT sum(age)
+FROM user;
+
+SELECT age,count(id)
+FROM user
+GROUP  BY age;
+
+SELECT  age,count(age) as m
+FROM user
+GROUP BY age
+HAVING m>2;

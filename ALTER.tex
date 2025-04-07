@@ -1,0 +1,17 @@
+ALTER TABLE user
+ADD COLUMN city VARCHAR(25) DEFAULT "delhi";
+
+ALTER TABLE user
+DROP COLUMN followers;
+
+ALTER TABLE user
+RENAME to instaUser;
+
+ALTER TABLE instaUser
+RENAME to user;
+
+ALTER TABLE user
+CHANGE  COLUMN  folows likes INT DEFAULT 0 ;
+
+ALTER TABLE user
+MODIFY  COLUMN  likes INT DEFAULT 5 ;

@@ -1,0 +1,16 @@
+// for Database
+
+CREATE DATABASE college;
+USE college;
+
+// for table
+
+CREATE TABLE user(
+id INT PRIMARY KEY,
+name varchar(30) NOT NULL,
+age INT,
+email VARCHAR(50) UNIQUE,
+followers INT  DEFAULT 0,
+folows INT,
+CONSTRAINT age_check CHECK (age>=30)
+);

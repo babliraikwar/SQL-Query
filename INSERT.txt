@@ -1,0 +1,8 @@
+// insert Data
+
+INSERT INTO user
+(id, age ,name,email,followers, folows)
+VALUES
+(10, 30,"nitesh","babliraik.in@gmail.com",100,70),
+(11, 36,"nitesh","babliraiw.in@gmail.com",500,60),
+(12, 30,"nitesh","babliaw.in@gmail.com",300,90);

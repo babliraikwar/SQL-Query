@@ -1,0 +1,8 @@
+SELECT * 
+FROM user
+WHERE  name  NOT IN ("trisha","babli")
+LIMIT 1;
+
+SELECT * 
+FROM user
+LIMIT 2;

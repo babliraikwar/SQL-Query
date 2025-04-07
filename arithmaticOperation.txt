@@ -1,0 +1,19 @@
+SELECT * 
+FROM user
+WHERE age>=30;
+
+SELECT name,age
+FROM user
+WHERE age>=30;
+
+SELECT * 
+FROM user
+WHERE age+1=31;
+
+SELECT * 
+FROM user
+WHERE age>=30 and folows>=30;
+
+SELECT * 
+FROM user
+WHERE age>=30 or folows<=50;

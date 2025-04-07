@@ -1,0 +1,8 @@
+SELECT * 
+FROM user
+ORDER BY name asc;
+
+
+SELECT * 
+FROM user
+ORDER BY name desc;

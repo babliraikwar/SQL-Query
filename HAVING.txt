@@ -1,0 +1,11 @@
+SELECT  age,count(age) as m
+FROM user
+GROUP BY age
+HAVING m>2;
+
+SELECT  count(marks) as m
+FROM user
+GROUP BY marks
+HAVING m>50;
+
+

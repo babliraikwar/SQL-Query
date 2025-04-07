@@ -1,0 +1,9 @@
+SELECT age
+FROM user
+GROUP  BY age;
+
+SELECT age,count(id)
+FROM user
+GROUP  BY age;
+
+// group by always used with aggrigate functions.

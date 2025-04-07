@@ -1,0 +1,7 @@
+SELECT * 
+FROM user
+WHERE  name IN ("trisha","babli");
+
+SELECT * 
+FROM user
+WHERE  name  NOT IN ("trisha","babli")

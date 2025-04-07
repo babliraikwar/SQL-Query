@@ -1,0 +1,7 @@
+DELETE FROM user
+WHERE name="mohit";
+
+// delele only column of a table
+
+// use before delete default query to delete
+SET SQL_SAFE_UPDATES=0;
